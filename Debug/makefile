@@ -23,7 +23,7 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := assingment4
+BUILD_ARTIFACT_NAME := assignment4
 BUILD_ARTIFACT_EXTENSION :=
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
@@ -34,19 +34,19 @@ BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ART
 all: main-build
 
 # Main-build Target
-main-build: assingment4
+main-build: assignment4
 
 # Tool invocations
-assingment4: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
+assignment4: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MacOS X C Linker'
-	gcc  -o "assingment4" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc  -o "assignment4" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) assingment4
+	-$(RM) assignment4
 	-@echo ' '
 
 .PHONY: all clean dependents main-build
